@@ -1,0 +1,15 @@
+lcd_gpio_with_asm_logic.c:75:9: warning: implicit declaration of function ‘lcd_init’ [-Wimplicit-function-declaration]
+         lcd_init(lcd_fd);  // Initialize the LCD
+         ^~~~~~~~
+lcd_gpio_with_asm_logic.c:86:13: warning: implicit declaration of function ‘lcd_send_string’ [-Wimplicit-function-declaration]
+             lcd_send_string(lcd_fd, text_buffer);  // Send to LCD
+             ^~~~~~~~~~~~~~~
+lcd_gpio_with_asm_logic.c: In function ‘read_gpio_pin’:
+lcd_gpio_with_asm_logic.c:137:36: error: ‘GPLEV0’ undeclared (first use in this function)
+     unsigned int gpio_value = gpio[GPLEV0 / 4];  // Read the GPIO pin level register
+                                    ^~~~~~
+lcd_gpio_with_asm_logic.c:137:36: note: each undeclared identifier is reported only once for each function it appears in
+lcd_gpio_with_asm_logic.c: In function ‘main’:
+lcd_gpio_with_asm_logic.c:190:10: error: ‘GPFSEL1’ undeclared (first use in this function)
+     gpio[GPFSEL1 / 4] &= ~(0b111 << 21);  // Clear bits 21-23 to set GPIO 17 as input
+          ^~~~~~~
